@@ -1,0 +1,195 @@
+.launch-warning {
+    background: #fff;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.launch-warning ul {
+    margin: 15px 0;
+    padding-left: 20px;
+}
+
+.launch-warning li {
+    margin: 5px 0;
+}
+
+.launch-progress {
+    background: #fff;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.progress-bar {
+    background: #f0f0f1;
+    height: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 15px 0;
+}
+
+.progress-bar .progress {
+    background: #2271b1;
+    height: 100%;
+    transition: width 0.3s ease-in-out;
+}
+
+.progress-text {
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+    color: #1d2327;
+}
+
+.launch-log {
+    background: #f8f9fa;
+    border: 1px solid #e2e4e7;
+    border-radius: 4px;
+    padding: 15px;
+    margin-top: 20px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.log-entry {
+    padding: 8px;
+    border-bottom: 1px solid #e2e4e7;
+    display: flex;
+    align-items: center;
+}
+
+.log-entry:last-child {
+    border-bottom: none;
+}
+
+.log-entry .timestamp {
+    color: #646970;
+    font-size: 12px;
+    margin-right: 10px;
+    min-width: 150px;
+}
+
+.log-entry .message {
+    flex-grow: 1;
+}
+
+.log-entry.success {
+    background: #ecf7ed;
+}
+
+.log-entry.error {
+    background: #fbeaea;
+}
+
+.log-entry.info {
+    background: #f0f6fc;
+}
+
+.launch-complete {
+    background: #fff;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.post-launch-checklist {
+    margin-top: 20px;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 4px;
+}
+
+.post-launch-checklist h3 {
+    margin-top: 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e2e4e7;
+}
+
+.post-launch-checklist ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.post-launch-checklist li {
+    padding: 10px;
+    margin: 5px 0;
+    background: #fff;
+    border: 1px solid #e2e4e7;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.post-launch-checklist li:hover {
+    background: #f0f6fc;
+}
+
+.post-launch-checklist li.completed {
+    background: #ecf7ed;
+    border-color: #46b450;
+    color: #46b450;
+}
+
+.post-launch-checklist li.completed:before {
+    content: '✓';
+    margin-right: 10px;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 782px) {
+    .log-entry {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .log-entry .timestamp {
+        margin-bottom: 5px;
+    }
+
+    .progress-text {
+        font-size: 14px;
+    }
+}
+
+/* Animation for status changes */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.launch-progress,
+.launch-complete {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Loading states */
+.button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* Error message styling */
+.notice-error {
+    margin: 20px 0;
+    padding: 10px 15px;
+    border-left: 4px solid #dc3232;
+    background: #fbeaea;
+}
+
+/* Success message styling */
+.notice-success {
+    margin: 20px 0;
+    padding: 10px 15px;
+    border-left: 4px solid #46b450;
+    background: #ecf7ed;
+}
